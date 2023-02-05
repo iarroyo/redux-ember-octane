@@ -1,5 +1,7 @@
 import Component from '@glimmer/component';
+import { tracked } from '@glimmer/tracking';
 import { service } from '@ember/service';
+import { trackedFunction } from 'ember-resources/util/function';
 
 import { ADD_ORGANIZATION, ADD_USER } from '../../actions';
 import { action } from '@ember/object';
@@ -36,5 +38,15 @@ export default class SampleReduxComponent extends Component {
   @action
   logOrganizationRedux() {
     console.log(...this.redux.state.organizations);
+  }
+
+  @tracked endpoint = 'starships';
+
+  concatUsersOrgs = trackedFunction(this, async () => {
+    return [...this.redux.state.organizations, ...this.redux.state.users];
+  });
+
+  get records() {
+    return this.concatUsersOrgs.value ?? [];
   }
 }

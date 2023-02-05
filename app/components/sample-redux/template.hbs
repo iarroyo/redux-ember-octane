@@ -16,3 +16,11 @@
 </ul>
 
 <button type="button" {{on "click" this.logOrganizationRedux}}>Log Organizations</button>
+<div>Merge user and organizations</div>
+<ul>
+  {{#each this.records as |record|}}
+    <li>
+      {{record}}
+    </li>
+  {{/each}}
+</ul>
