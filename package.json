@@ -80,7 +80,6 @@
     "ember-resolver": "^10.0.0",
     "ember-source": "~4.10.0",
     "ember-template-lint": "^5.3.1",
-    "ember-welcome-page": "^6.2.0",
     "eslint": "^7.32.0",
     "eslint-config-prettier": "^8.6.0",
     "eslint-plugin-ember": "^11.4.3",
@@ -92,6 +91,7 @@
     "qunit": "^2.19.3",
     "qunit-dom": "^2.0.0",
     "tracked-built-ins": "^3.1.0",
+    "tracked-redux": "^1.0.1",
     "typescript": "^4.9.5",
     "webpack": "^5.75.0"
   },

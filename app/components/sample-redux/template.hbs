@@ -1,0 +1,18 @@
+<label>
+  User:
+  <input type="text" {{on "keydown" this.addUser}} />
+</label>
+<label>
+  Organization:
+  <input type="text" {{on "keydown" this.addOrganization}} />
+</label>
+
+<ul>
+  {{#each this.redux.state.users as |user|}}
+    <li>
+      {{user}}
+    </li>
+  {{/each}}
+</ul>
+
+<button type="button" {{on "click" this.logOrganizationRedux}}>Log Organizations</button>
